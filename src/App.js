@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Sider from "./Components/Sider";
+import ProfileSide from "./Components/ProfileSide";
+import PersonalInfo from "./Components/PersonalInfo";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="enrollment App">
+      <Sider />
+
+      <div className="container-fluid customCOntainerfluid ">
+        <div className="row mt-1">
+          <div
+            className="col-md-12 col-lg-4 p-lg-0"
+            style={{ height: "370px", width: "370px" }}
+          >
+            <ProfileSide />
+          </div>
+
+          <div className="col-md-12 col-lg-8">
+            <div className="profileInfo">
+              {/* <PersonalInfo /> */}
+
+              {/* <AddressInfo />
+
+              <BusinessInfo />
+
+              <BankDetails /> */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
 
